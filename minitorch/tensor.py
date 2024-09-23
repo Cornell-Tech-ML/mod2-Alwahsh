@@ -319,6 +319,12 @@ class Tensor:
     def __rmul__(self, b: TensorLike) -> Tensor:
         return self * b
 
+    def __truediv__(self, b: TensorLike) -> Tensor:
+        return Mul.apply(self, Inv.apply(self._ensure_tensor(b)))
+
+    def __rtruediv__(self, b: TensorLike) -> Tensor:
+        return Mul.apply(self._ensure_tensor(b), Inv.apply(self))
+
     def all(self, dim: Optional[int] = None) -> Tensor:
         if dim is None:
             return All.apply(self.view(self.size), self._ensure_tensor(0))
