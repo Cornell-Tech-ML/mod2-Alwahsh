@@ -264,5 +264,5 @@ class Tensor:
         backpropagate(self, grad_output)
 
     # Functions
-    # TODO: Implement for Task 2.3.
-    raise NotImplementedError("Need to implement for Task 2.3")
+    # # TODO: Implement for Task 2.3.
+    # raise NotImplementedError("Need to implement for Task 2.3")
