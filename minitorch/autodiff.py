@@ -40,21 +40,16 @@ class Variable(Protocol):
         pass
 
     @property
-    def unique_id(self) -> int:
-        pass
+    def unique_id(self) -> int: ...
 
-    def is_leaf(self) -> bool:
-        pass
+    def is_leaf(self) -> bool: ...
 
-    def is_constant(self) -> bool:
-        pass
+    def is_constant(self) -> bool: ...
 
     @property
-    def parents(self) -> Iterable["Variable"]:
-        pass
+    def parents(self) -> Iterable["Variable"]: ...
 
-    def chain_rule(self, d_output: Any) -> Iterable[Tuple["Variable", Any]]:
-        pass
+    def chain_rule(self, d_output: Any) -> Iterable[Tuple["Variable", Any]]: ...
 
 
 def topological_sort(variable: Variable) -> Iterable[Variable]:
