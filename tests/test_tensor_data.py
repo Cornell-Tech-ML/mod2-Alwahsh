@@ -81,7 +81,7 @@ def test_index(tensor_data: TensorData) -> None:
 @given(data())
 def test_permute(data: DataObject) -> None:
     td = data.draw(tensor_data())
-    ind = data.draw(indices(minitorch.Tensor(td)))
+    ind = data.draw(indices(td))
     td_rev = td.permute(*list(reversed(range(td.dims))))
     assert td.index(ind) == td_rev.index(tuple(reversed(ind)))
 
