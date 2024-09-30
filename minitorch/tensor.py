@@ -273,5 +273,13 @@ class Tensor:
         """Not used until Module 3"""
         return MatMul.apply(self, b)
 
+    @property
+    def shape(self) -> UserShape:
+        """
+        Returns:
+             shape of the tensor
+        """
+        return self._tensor.shape
+
     # Functions
     # TODO: Implement for Task 2.3.
