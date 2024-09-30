@@ -10,26 +10,26 @@ import numpy as np
 from . import operators
 from .autodiff import Context, Variable, backpropagate
 from .tensor_data import TensorData
-from .tensor_functions import (
-    EQ,
-    LT,
-    Add,
-    All,
-    Copy,
-    Exp,
-    Inv,
-    IsClose,
-    Log,
-    MatMul,
-    Mul,
-    Neg,
-    Permute,
-    ReLU,
-    Sigmoid,
-    Sum,
-    View,
-    tensor,
-)
+# from .tensor_functions import (
+#     EQ,
+#     LT,
+#     Add,
+#     All,
+#     Copy,
+#     Exp,
+#     Inv,
+#     IsClose,
+#     Log,
+#     MatMul,
+#     Mul,
+#     Neg,
+#     Permute,
+#     ReLU,
+#     Sigmoid,
+#     Sum,
+#     View,
+#     tensor,
+# )
 
 if TYPE_CHECKING:
     from typing import Any, Iterable, List, Optional, Sequence, Tuple, Type, Union
